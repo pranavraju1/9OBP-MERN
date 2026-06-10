@@ -173,16 +173,16 @@
 
 // hoisting -> "the declaration" of the variable is moved to the top of its scope
 
-{
-    console.log(a);
-    var a = 5;
-}
-// the above code would look like the below after hoisiting
-{
-    var a;
-    console.log(a);
-    a = 5;
-}
+// {
+//     console.log(a);
+//     var a = 5;
+// }
+// // the above code would look like the below after hoisiting
+// {
+//     var a;
+//     console.log(a);
+//     a = 5;
+// }
 
 
 
