@@ -78,7 +78,7 @@
 
 
 
-let subjects = ['Math', 'Science', 'SST', 'Hindi', 'English']
+// let subjects = ['Math', 'Science', 'SST', 'Hindi', 'English']
 
 // task1:
 // 1. Math
@@ -105,16 +105,16 @@ let subjects = ['Math', 'Science', 'SST', 'Hindi', 'English']
 
 // task3 -> replace all even values with "even"
 // let arr = [1,2,3,4,5,6] -> [1, "even" , 3 , "even" , 5 , "even"];
-// let arr = [1 ,2 ,3 ,4 ,5 ,6]
-// for(let i=0; i<arr.length; i++){
-//     if(arr[i]%2 == 0){
-//         arr[i] = "even"
-//     }
-// }
+let arr = [1 ,2 ,3 ,4 ,5 ,6]
+for(let i=0; i<arr.length; i++){
+    if(arr[i]%2 == 0){
+        arr[i] = "even"
+    }
+}
 // console.log(arr)
 
 
-const  arr = [1, 2, 3, 4, 5, 6];
-arr[0] = 0; //[0, 2, 3, 4, 5, 6]
-arr = [2,3,4,5,6];   //error
-console.log(arr);
+// const  arr = [1, 2, 3, 4, 5, 6];
+// arr[0] = 0; //[0, 2, 3, 4, 5, 6]
+// arr = [2,3,4,5,6];   //error
+// console.log(arr);
