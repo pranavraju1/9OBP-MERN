@@ -60,10 +60,6 @@
 // arr.length = 2
 
 
-
-
-
-
 // shift() -> removes the element from start and returns that element
 // let fruits = ["apple", "banana", "papaya"];
 // fruits.shift(); //[ 'banana', 'papaya' ]
@@ -74,16 +70,11 @@
 // will shift/move 1 index less
 
 
-
-
-
 // unshift -> adds elements at the start of the array and returns the new length
 // let fruits = ["apple", "banana", "papaya"];
 // fruits.unshift("kiwi"); //["kiwi","apple", "banana", "papaya"]
 // console.log(fruits.unshift("orange")) // 5
 // fruits.unshift("water melon", "grapes") //['water melon','grapes','orange','kiwi','apple','banana','papaya']
-
-
 
 // let arr = [1,2,3,4,5];
 // let ele = arr.pop();
