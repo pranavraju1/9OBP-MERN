@@ -104,14 +104,121 @@
 // console.log(a,b,pack);
 
 // function parameter
-function sum(...numbers){
-  let sum=0;
-  for(let i=0;i<numbers.length;i++){
-    sum=sum+numbers[i];
-  }
-  return sum;
-}
-console.log(sum(1,2,3,4));
-console.log(sum(1,2,3,4,5));
+// function sum(...numbers){
+//   let sum=0;
+//   for(let i=0;i<numbers.length;i++){
+//     sum=sum+numbers[i];
+//   }
+//   return sum;
+// }
+// console.log(sum(1,2,3,4));
+// console.log(sum(1,2,3,4,5));
 
 
+// let arr = [1,2,3,4];
+// let copy = arr.slice();
+// copy.push(3);
+// console.log(arr);
+// [1,2,3,4]
+
+// inserting element to nested level.
+// let arr = [1,2,3,4,[5,6,7]];
+// let copy = arr.slice();
+// copy[4].push(8);
+// console.log(arr);
+
+
+// spread operator
+// let arr = [1,2,3,4,[5,6]];
+// let copy=[...arr]; //shallow copy
+// copy[4].push(5);
+// console.log(arr);
+
+
+// deep copy - copy all the items of all the levels recursively(no shared reference )
+// let arr = [1,2,3,[4,5,6]];
+// let copy = structuredClone(arr);
+// copy[3].push(7);
+// console.log(arr);
+
+
+//spread operator - expands an iteratable(array) in to individual elements
+// let arr = [1,2,3];
+
+// console.log(arr[0],arr[1],arr[2]);
+// // 1 2 3
+// console.log(...arr);
+// // 1 2 3
+
+
+// merge array
+// let arr1 = [1,2,3];
+// let arr2 = [3,4,5];
+// let arr3 = arr1.concat(arr2);
+// console.log(arr3);
+
+// let arr1 = [1,2,3];
+// let arr2= [4,5,6];
+// let arr3 = [...arr1,...arr2];
+// console.log(arr3);
+
+// function argument
+// function sum(a,b,c){
+//     return a+b+c;
+// }
+
+// console.log(sum(...[1,2,3]));
+//6
+
+// rest operator - collect multiple value in to single array
+
+// 1 use case
+
+
+
+
+// Array Destructuring
+// let arr = [1,2,3];
+// let a = arr[0];
+// let b = arr[1];
+// let c = arr[2];
+// console.log(a,b,c);
+// // 1 2 3 
+
+// let [a,b,c] =[1,2,3];
+// console.log(a,b,c);
+
+// let [,a,b,] = [1,2,3,4];
+// console.log(a,b);
+
+// let [a,b,...pack] =[1,2,3,4,5,6]
+// console.log(pack); //rest operator
+// [3,4,5,6]
+
+// function parameter
+
+// function sum(...numbers){
+//     let sum=0;
+//     for(let i=0;i<numbers.length;i++){
+//         sum= sum+numbers[i];
+//     }
+//     return sum;
+// }
+
+// console.log(sum(1,2,3)); //6
+// console.log(sum(1,2,3,4)); //10
+
+// arr.flat() //flatten the array up to specified depth
+// let arr = [1,2,3,4,[5,6,7]];  
+// let arr2= arr.flat(1);
+// console.log(arr2);
+// [1,2,3,4,5,6,7]
+
+// let arr = [1,2,3,4,[5,6,7,[8,9]]];
+// let arr2 = arr.flat(2);
+// console.log(arr2);
+
+let arr = [1,2,3,4,[5,6,7,8,9]];
+let arr2 = arr.flat();
+console.log(arr);
+// [1,2,3,4,5,6,7,8,9]
