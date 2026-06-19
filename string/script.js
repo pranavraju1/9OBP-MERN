@@ -61,12 +61,12 @@
 // }
 
 // complex task1-  
- let str = "my name is tarun";
+let str = "my name is tarun";
 //result = "mynameistarun"
-let result="";
-for(let i=0;i<str.length;i++){
-    if(str[i]!==" ")
-     result=result+str[i];
+let result = "";
+for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ")
+        result = result + str[i];
 }
 console.log(result);
 
