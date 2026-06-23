@@ -217,5 +217,30 @@
 
 // console.log(str.padStart(4,"00"));
 
-let str1 = "1111";
-console.log(str1.padStart(2,"0"));
+// let str1 = "1111";
+// console.log(str1.padStart(2,"0"));
+
+
+// let str = "abcd";
+// console.log(str.substring(1,3)); //bc
+// console.log(str.substring(1));
+// console.log(str.substring());
+
+
+// given a string(more than 4 character) print all the substring length 2;
+// let str = "Tarun";
+// //Ta ar ru un
+
+// for(let i=0;i<str.length-1;i++){
+//     console.log(str.substring(i,i+2));
+// }
+
+// given a string str.  calacualte total no of substring of str
+//  str -> n -> n*(n+1)/2
+
+function totalSubString(str){
+    let n = str.length;
+    return n*(n+1)/2; 
+}
+
+console.log(totalSubString("Tar"));
