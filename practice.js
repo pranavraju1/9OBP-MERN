@@ -33,4 +33,6 @@
 // console.log(secondIndex - firstIndex - 1);
 
 
-let arr = [3, 4, 1, 2];
+
+
+
