@@ -31,8 +31,16 @@
 // }
 
 // console.log(secondIndex - firstIndex - 1);
+function findPath(obj,path){
 
+}
 
-
-
-
+findPath()
+let obj = {
+    a:1,
+    b:{
+        c:{
+            z:2
+        }
+    }
+}
