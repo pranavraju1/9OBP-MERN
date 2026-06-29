@@ -17,7 +17,7 @@
 // console.log(arr); //200 2000 202 300
 
 // custom sort 
- let arr = [200,300,202,2000];
- // asceding order
-sort(comparatorFunction);
+//  let arr = [200,300,202,2000];
+//  // asceding order
+// sort(comparatorFunction);
 
