@@ -189,15 +189,16 @@
 
 // sort the students array based on marks in asceding order if the two students 
 // have equal marks print acording to their name in lexicographical order
- let students = [
-   {name:"Prem",marks:20},
-   {name:"Akshay",marks:15},
-   {name:"Naman",marks:25},
-   {name:"Bhupnesh",marks:40},
-   {name:"Avnesh",marks:40}
-];
+//  let students = [
+//    {name:"Prem",marks:20},
+//    {name:"Akshay",marks:15},
+//    {name:"Naman",marks:25},
+//    {name:"Bhupnesh",marks:40},
+//    {name:"Avnesh",marks:40}
+// ];
 
-// h.w2
-let str = ["avinash","vikash","taras","manas"];
+// // h.w2
+// let str = ["avinash","vikash","taras","manas"];
 
 // sort it in reverse lexicographical order
+
