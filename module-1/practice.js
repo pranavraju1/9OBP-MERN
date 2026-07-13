@@ -31,16 +31,20 @@
 // }
 
 // console.log(secondIndex - firstIndex - 1);
-function findPath(obj,path){
+// function findPath(obj,path){
 
-}
+// }
 
-findPath()
-let obj = {
-    a:1,
-    b:{
-        c:{
-            z:2
-        }
-    }
+// findPath()
+// let obj = {
+//     a:1,
+//     b:{
+//         c:{
+//             z:2
+//         }
+//     }
+// }
+
+for(let i=0;i<5;i++){
+    process.stdout.write("*");
 }
