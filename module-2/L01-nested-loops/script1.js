@@ -202,6 +202,63 @@
 
 // A
 // BC
-// CDE 
-// EFGH
-// IJKLM
+// DEF 
+// GHIJ
+// kLMNO
+
+
+// let cCode = 65;
+// let n=5;
+// for(let row=0;row<n;row++){
+//     let str="";
+//     for(let col=0;col<=row;col++){
+//         str+=String.fromCharCode(cCode);
+//         cCode++;
+//     }
+//     console.log(str);
+// }
+
+
+//       *
+//      **
+//     ***
+//    ****
+
+let n=4;
+for(let row=0;row<n;row++){
+    let str="";
+    //space first
+    for(let col =0;col<n-row-1;col++){
+      str+=" ";
+    }
+    // star
+    for(let col=0;col<row+1;col++){
+     str+="*";
+    }
+    console.log(str);
+}
+
+//H.w
+//    ****
+//     ***
+//      **
+//       *
+
+
+
+    *
+   ***
+  *****
+ *******
+
+
+l
+ for(let row =0;row<n;row++){
+    let str="";
+    for(let col=0;col<n-row-1;col++){
+        //space
+    }
+    for(let col=0;col<2*row+1;i++){
+        // start
+    }
+ }
