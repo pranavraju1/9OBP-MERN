@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+    .card-wrapper{
+       display:flex;
+       flex-direction:row;
+       justify-content: space-evenly;
+       gap:20px;
+       flex-wrap: nowrap;
+       align-items: flex-start;
+    }
+
+    @media (max-width:1000px){
+      .card-wrapper{
+        flex-wrap: wrap;
+      }  
+    }
+
+    
+
+    .card {
+        width: 300px;
+        border: 1px solid black;
+        /* flex-shrink: 1; */
+    }
+
+    .card img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .product-about {
+        padding: 10px;
+    }
+
+    .product-summary {
+        height: 100px;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <!-- 6 product responsive  -->
+    <div class="card-wrapper">
+        <div class="card">
+            <img src="https://cdn.dribbble.com/userupload/43585221/file/original-bad7ce511123618af0196d4054a4ac3f.png?format=webp&resize=400x300&vertical=center"
+                alt="product-img" />
+            <div class="product-about">
+                shoes <span>50</span>
+            </div>
+            <div class="product-summary">
+                Beautiful, modern product card work, designs,
+                illustrations, and graphic elements
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://cdn.dribbble.com/userupload/43585221/file/original-bad7ce511123618af0196d4054a4ac3f.png?format=webp&resize=400x300&vertical=center"
+                alt="product-img" />
+            <div class="product-about">
+                shoes <span>50</span>
+            </div>
+            <div class="product-summary">
+                Beautiful, modern product card work, designs,
+                illustrations, and graphic elements
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.dribbble.com/userupload/43585221/file/original-bad7ce511123618af0196d4054a4ac3f.png?format=webp&resize=400x300&vertical=center"
+                alt="product-img" />
+            <div class="product-about">
+                shoes <span>50</span>
+            </div>
+            <div class="product-summary">
+                Beautiful, modern product card work, designs,
+                illustrations, and graphic elements
+            </div>
+        </div>
+    </div>
+    <!-- one card  -->
+
+</body>
+
+</html>

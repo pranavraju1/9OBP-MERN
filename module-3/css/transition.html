@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<!-- A transition makes a CSS property change happen smoothly over a period of time instead of changing instantly. -->
+
+<!-- transition: property duration timing-function delay; -->
+<!-- time function   -->
+<!-- Timing Functions
+The timing function controls how the transition progresses over time -->
+<!-- ease,linear,easy-in,easy-out,easy-in-out -->
+
+
+<style>
+    button {
+        background-color: blue;
+        transition: background-color 1s;
+    }
+
+    button:hover {
+        background-color: red;
+        /* transform: scale(1.1); */
+    }
+
+    /* @keyframes is used to define the steps of a CSS animation. */
+    /* "At the beginning, make the element look like this. Then change it to this. Finally, make it look like this." */
+    /* @keyframes move {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(200px);
+        }
+    } */
+
+</style>
+
+<body>
+    <Button>Click Me</Button>
+</body>
+
+</html>

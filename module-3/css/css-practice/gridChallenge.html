@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Chalenge</title>
+</head>
+<style>
+    .container {
+        height: 400px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4,1fr) ;
+        grid-template-rows: 1fr 1fr ;
+    }
+
+    .box {
+        border: 2px solid red;   
+    }
+
+    .box1{
+        /* startrow/startcol/endrow/endcolumn */
+      grid-area:1/1/3/2;
+    }
+
+    .box2{
+         grid-area:1/2/3/3;
+    }
+
+    .box3{
+         grid-area:1/3/3/4;
+    }
+
+    .box4{
+       grid-area:1/4/2/5; 
+    }
+
+    .box5{
+         grid-area:2/4/3/5;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box box1">
+            Box1
+        </div>
+        <div class="box box2">
+            Box2
+        </div>
+        <div class="box box-3">
+            Box3
+        </div>
+        <div class="box box4">
+            Box4
+        </div>
+        <div class="box box5">
+            Box5
+        </div>
+    </div>
+</body>
+
+</html>

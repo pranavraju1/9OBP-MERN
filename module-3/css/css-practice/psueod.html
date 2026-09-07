@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo class and Pseudo Element</title>
+</head>
+<style>
+    /* Pseudo Classes  */
+    /* : */
+    .btn{
+        background-color:blue;
+    }
+     
+    .btn:hover{
+        background-color: red;
+    }
+    
+    a:hover {
+        color:green;
+    }
+
+    a:visited{
+        color:aqua;
+    }
+
+    /* Psuedo element-> used for targeting part of the element */
+    /* :: */
+    p::first-letter{
+        font-size:3rem;
+    }
+
+    ul::first-line{
+        color:green;
+    }
+
+    .important::before{
+        content:"important";
+        color:red;
+    }
+
+
+
+</style>
+<body>
+   <button class="btn">Click me </button><br>
+   <a href="https://google.com">visit</a>
+
+   <p>This is the way to make maximum<span class="important"></span> out of this </p>
+
+   <ul>
+     <li>
+        1
+     </li>
+     <li>
+        2
+     </li>
+      <li>
+        3
+     </li>
+     <li>
+        4
+     </li>
+   </ul>
+</body>
+</html>
