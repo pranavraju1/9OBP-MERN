@@ -1,0 +1,40 @@
+<!-- createElement, appendChild, append, prepend, insertBefore, element.remove(), removeChild, -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Dom</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello</h1>
+        <h1>World</h1>
+
+    </div>
+
+    <script>
+        // create element
+        const heading = document.createElement("h1");
+        heading.textContent = "Learning Javascript";
+
+        const heading2= document.createElement("h2");
+
+        heading2.textContent="Practicing Javascript";
+
+        //appendChild -> append add an element as the last child of another element and return the element that is added.
+        let container = document.querySelector(".container");
+        // container.appendChild(heading);
+
+        //append -> allow to add text and multiple element  and append return undefined 
+        container.append("Hello",heading,heading2);
+
+        // challenge
+        // create a container and inside that add paragraph and heading 
+    </script>
+</body>
+
+</html>

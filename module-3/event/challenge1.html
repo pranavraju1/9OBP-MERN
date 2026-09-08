@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+</head>
+
+<body>
+
+    <p>Count: <span>0</span></p>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+
+    <script>
+        let span = document.querySelector("span");
+        let incButton = document.querySelector("#increment");
+        let decButton = document.querySelector("#decrement")
+
+        let count = 0;
+        function hanldeIncrement() {
+            count++;
+            span.textContent = count;
+        }
+
+        function handleDecrement() {
+            if(count>0)
+              count--;
+            span.textContent= count;
+        }
+
+        incButton.addEventListener("click", hanldeIncrement);
+
+        decButton.addEventListener("click",handleDecrement);
+
+    </script>
+
+</body>
+
+</html>
