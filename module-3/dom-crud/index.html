@@ -10,30 +10,91 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Hello</h1>
+    <!-- <div class="container">
+        <h1 class="greet">Hello</h1>
         <h1>World</h1>
-
     </div>
+
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>4</li>
+        <li>6</li>
+        <li>5</li>
+    </ul> -->
+
+    <form class="inputform">
+       <input type="text" placeholder="enter your name"> <br>
+       <input type="password" placeholder="Enter your password"><br>
+       <button type="submit">Submit</button>
+    </form>
 
     <script>
         // create element
-        const heading = document.createElement("h1");
-        heading.textContent = "Learning Javascript";
+        // const heading = document.createElement("h1");
+        // heading.textContent = "Learning Javascript";
 
-        const heading2= document.createElement("h2");
+        // const heading2= document.createElement("h2");
 
-        heading2.textContent="Practicing Javascript";
+        // heading2.textContent="Practicing Javascript";
 
-        //appendChild -> append add an element as the last child of another element and return the element that is added.
-        let container = document.querySelector(".container");
+        // //appendChild -> append add an element as the last child of another element and return the element that is added.
+        // let container = document.querySelector(".container");
         // container.appendChild(heading);
 
         //append -> allow to add text and multiple element  and append return undefined 
-        container.append("Hello",heading,heading2);
+        // container.append("Hello",heading,heading2);
 
         // challenge
         // create a container and inside that add paragraph and heading 
+
+        // prepand -> add a new element to another element as first child.
+        // let container=document.querySelector(".container");
+
+        // let h1 = document.createElement("h1");
+        // h1.textContent="Javascript"
+        // container.prepend(h1);
+
+        // insertBefore -> allow us to add a new element before particular child of the parent
+        //  let container = document.querySelector(".container");
+
+        //  let heading=document.createElement("h2");
+        //  heading.textContent="This is ";
+
+        //  let reference=container.children[1];
+        //  container.insertBefore(heading,reference);
+
+
+        // insert(newelement,reference)
+
+        // let list = document.querySelector(".list");
+        // let reference = list.children[2];
+        // let li = document.createElement("li");
+        // li.textContent = 3;
+        // list.insertBefore(li,reference);
+
+        // element.remove() -> remove the element
+        //  let element= document.querySelector('.greet');
+        //  element.remove();
+
+        // // parent.removeChild(children) ->
+        // let list= document.querySelector(".list")
+       
+        // let reference=list.children[3];
+
+        // list.removeChild(reference)
+
+        let form = document.querySelector(".inputform");
+
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+            // api call
+            console.log("form submitted");
+        })
+
+
+        
+
     </script>
 </body>
 

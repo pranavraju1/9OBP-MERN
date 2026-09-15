@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<!-- matches -->
+
+<!-- Event Delegation -> instead of applying event listener to each child can be applied to parent. -->
+
+<!-- matches -->
+
+<body>
+    <ul class="products">
+        <li>Phone</li>
+        <li>Laptop</li>
+        <li>Microphone</li>
+        <li>Speaker</li>
+    </ul>
+
+    <script>
+        let ul = document.querySelector("ul");
+
+        ul.addEventListener("click", function (event) {
+            console.log(event.target.innerText);
+            if (event.target.innerText == "Phone") {
+                // action
+                console.log("Phone purchased")
+            }
+        })
+
+        console.log(ul.matches(".products"));
+
+
+    </script>
+</body>
+
+</html>

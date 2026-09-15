@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .dark {
+        background-color: black;
+        color: white;
+    }
+
+    .light {
+        background-color: white;
+        color: black;
+    }
+</style>
+
+
+<body>
+    <select class="theme" id="select">
+        <option>White</option>
+        <option>Dark</option>
+    </select>
+
+    <!-- create dark theme white theme -->
+    <script>
+        // let themeHandle = document.querySelector(".theme");
+        // let body = document.querySelector("body");
+
+        // let theme = localStorage.getItem("theme") || "light";
+
+        // body.className = theme;
+
+        // themeHandle.addEventListener("change", function (event) {
+        //     if (event.target.value == "Dark") {
+        //         theme = "dark";
+        //         body.className = theme;
+        //         localStorage.setItem("theme", theme)
+        //     }
+        //     else {
+        //         let theme = "light";
+        //         body.className = theme;
+        //         localStorage.setItem("theme", theme)
+        //     }
+        // })
+
+        // setItem()-> use to set value in the storage
+        // localStorage.setItem("theme","dark");
+
+        // sessionStorage.setItem("theme","dark");
+
+        // // getItem()-> reterieve the value from the storage
+        // console.log("localStorage",localStorage.getItem("theme"));
+
+        // console.log("session",sessionStorage.getItem("theme"));
+
+
+        // // remove item
+        // console.log(localStorage.removeItem("theme"));
+        // console.log(sessionStorage.removeItem("theme"))
+
+
+        // localStorage.setItem("theme","dark");
+        // localStorage.setItem("card","phone");
+
+
+        // localStorage.clear();
+
+        // null if item is not present 
+        //  console.log(localStorage.getItem("age")) //null
+        //  console.log(sessionStorage.getItem("age")) //null
+
+        // item are stored as string in the storage
+        // localStorage.setItem("age",20);
+        // let age = localStorage.getItem("age");
+        // console.log(typeof(age)) // string 
+
+        // 
+
+        // let user = {
+        //     id:1,
+        //     username:"ankit",
+        //     age:20
+        // }
+
+        // can'nt save object direcly in the storage
+        // localStorage.setItem("user",user);
+
+        // JSON.stringify()
+        // converts the object to JSON Stringify
+
+        // console.log(JSON.stringify(user));
+
+        // localStorage.setItem("user",JSON.stringify(user));
+      
+        // array save 
+        //  let arr = [1,2,3,4];
+
+        // localStorage.setItem("arr",JSON.stringify(arr));
+
+        // reteriving object and array from the storage 
+        // console.log(JSON.parse(localStorage.getItem("user")));
+
+        // localStorage.setItem(1,5);
+        
+          
+
+    </script>
+</body>
+
+</html>

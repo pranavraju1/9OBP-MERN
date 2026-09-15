@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propogation</title>
+</head>
+<style>
+    .container {
+        border: 2px solid grey;
+        width: 300px;
+        height: 300px;
+    }
+</style>
+
+<!-- When a event occurs  -->
+<!-- event prograte across the dom -->
+<!-- capturing phase -> by defualt capture phase is disabled
+ target phase
+ bubbling phase -->
+
+<!-- capturing phase -> 
+     document ->
+
+     html ->
+
+     body ->
+
+     grandparent ->
+
+     parent ->
+
+     target element -->
+
+<!-- Bubbling Phase -->
+<!-- target element -->
+
+<!-- parent ->
+
+grandparent ->
+
+body ->
+
+html ->
+
+document ->  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    <div class="container">
+        <button>click</button>
+    </div>
+
+    <script>
+        let container = document.querySelector(".container");
+        let button = document.querySelector("button");
+
+        // bubbling
+        container.addEventListener("click", function (event) {
+            console.log("target", event.target);
+            console.log("currentTargert", event.currentTarget);
+            console.log("parent clicked-bubbling");
+        })
+
+        button.addEventListener("click", function (event) {
+            event.stopPropagation();
+            console.log("button clicked-bubbling");
+        })
+
+
+
+        // // capturing 
+        container.addEventListener("click", function () {
+            console.log("parent clicked-capturing");
+        }, true)
+
+        button.addEventListener("click", function () {
+            console.log("button clicked-capturing");
+        }, true)
+
+
+    </script>
+</body>
+
+</html>

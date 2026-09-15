@@ -1,0 +1,75 @@
+<!-- parentElement, closest(), children vs childNodes,
+firstElementChild/lastElementChild,
+nextElementSibling/previousElementSibling;
+event bubbling/capturing,
+target vs currentTarget, stopPropagation,
+delegation with matches() -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigation</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello</h1>
+        <h2>JS</h2>
+        <p>
+            In this module will learn about frontend Development
+        </p>
+        check
+        <!-- check -->
+    </div>
+
+
+    <script>
+
+        // let heading = document.querySelector("h1");
+        // find parent element of heading 
+        // console.log(heading.parentElement);
+
+        // console.log(heading.parentElement.parentElement);
+
+        // closest -> closest element 
+        // -> can pass any selector in closest
+        // let element = heading.closest(".container");
+        // console.log(element);
+
+        // find the child of container 
+        // let container = document.querySelector(".container")
+        // console.log(container.children[0])
+
+        // console.log(container.children[1]);
+
+        // // find the number of children 
+        // console.log(container.children.length);
+
+        // // childNodes 
+
+        // console.log(container.childNodes)
+
+        // // firstElementChild 
+        // console.log(container.firstElementChild);
+
+        // // lastElementChild 
+        // console.log(container.lastElementChild)
+
+        // nextElementSibling 
+        // const heading = document.querySelector("h2");
+        // console.log(heading.nextElementSibling)
+
+
+        // // prevElementSibling
+        // console.log(heading.previousElementSibling);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button class="addTask">Add</button>
+    <ol>
+
+    </ol>
+    <script>
+       let addTask=document.querySelector(".addTask");
+       let input = document.querySelector("input");
+       let list = document.querySelector("ol");
+
+       function handleAddTask(){
+           let value=input.value;
+
+           let li=document.createElement("li")
+               
+           let span=document.createElement("span")
+           span.textContent=value;
+
+           let button = document.createElement("button");
+           button.textContent="Delete";
+           
+           button.addEventListener("click",function(){
+                  li.remove();
+           })
+
+           li.append(span,button);
+
+           list.append(li);
+           input.value="";
+       }
+
+       addTask.addEventListener("click",handleAddTask);
+        
+
+    </script>
+</body>
+</html>

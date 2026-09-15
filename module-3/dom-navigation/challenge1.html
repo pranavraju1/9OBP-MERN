@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1</title>
+</head>
+
+<body>
+    <div class="products">
+
+        <div class="product">
+            <h3>Wireless Headphones</h3>
+            <p>₹1999</p>
+            <button class="remove">Remove</button>
+        </div>
+
+        <div class="product">
+            <h3>Mechanical Keyboard</h3>
+            <p>₹2999</p>
+            <button class="remove">Remove</button>
+        </div>
+
+        <div class="product">
+            <h3> Speaker</h3>
+            <p>₹2999</p>
+            <button class="remove">Remove</button>
+        </div>
+
+        <div class="product">
+            <h3> Microphone</h3>
+            <p>₹2999</p>
+            <button class="remove">Remove</button>
+        </div>
+
+    </div>
+    <script>
+        // on click of delete 
+        let products = document.querySelector(".products");
+
+        products.addEventListener("click", function (event) {
+            if (event.target.matches(".remove")) {
+                let product = event.target.closest(".product")
+                product.remove();
+            }
+        })
+
+    </script>
+</body>
+
+</html>
+
+<!-- A developer has already added one click listener to .products.
+Your task:
+When the user clicks Remove, only that particular product should disappear.
+
+
+Rules
+You cannot add listeners to individual buttons.
+You cannot use IDs.
+The solution should continue working if 50 more products are added dynamically. -->
