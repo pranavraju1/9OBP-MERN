@@ -9,8 +9,273 @@
 
 <body>
     <script>
-   
-      console.log(this); 
+        //   let user1 ={
+        //     name:"Abhishek",
+        //       age:20
+        //   }
+
+        //   let user2={
+        //     name:"Akash"
+        //   }
+
+        // constructor function -> normal javascript javascript used for creating blueprint of the object.
+
+        // function User(name, age) {
+        //     this.name = name; // instance of property
+        //     this.age = age;
+        // }
+
+        // let user1 = new User("Abhishek", 20);
+        // let user2 = new User("Akash", 30);
+
+        // // console.log(user1, user2);
+
+        // console.log(user1.name);
+
+        // console.log(user2.name);
+
+        // constrcutor functio with method 
+        // function User(name,age){
+        //     this.name=name;
+        //     this.age=age;
+        //     this.printName=function (){
+        //         console.log("name is",this.name);
+        //     }
+        // }
+
+        // let user1 = new User("abhishek",20);
+
+        // user1.printName();
+
+        // new keyword 
+
+        //     function User(name,age,address){
+        //         this.name=name;
+        //         this.age=age;
+        //         this.address=address;
+        //         this.printName=function(){
+        //             console.log(this.address.city);
+        //         }
+        //     }
+
+        //    let user1 = new User("Prathmesh",20,{city:"Pune"});
+
+        //    user1.printName();
+
+        // Window Object 
+        // console.log(window);
+
+        // console.log(window.localStorage);
+        // console.log(window.console);
+
+
+        // console.log(window.document);
+        // console.log(document);
+
+        // console.log(window.document==document)
+
+        //  context this is window 
+
+
+        // var a =2;
+        // console.log(window.a);
+
+        // let b=3;
+        // console.log(window.b);
+
+        // const c=4;
+        // console.log(window.c);
+
+        // Scope -> Script(let const class) and global(var functiohn)
+
+
+        // Javascript  Enviroment 
+
+        // javascript global Enviroment(gloabl)(var function)
+
+        // declarative enviroment (script)((let const class)
+
+
+        //  this keyword -> this keyword refer to the context or object that is calling the function.
+
+        // let user = {
+        //     name:"Abhishek",
+        //     age:20,
+        //     printName(){
+        //        console.log(this.name);
+        //     }
+        // }
+
+
+        // user.printName();
+
+
+        // challenge
+        // function printName(){
+        //     console.log("name of the user is",this.name)
+        // }
+
+        // let user1 ={
+        //     name:"Akash",
+        //     age:20
+        // }
+
+        // let user2={
+        //     name:"Vikas",
+        //     age:30
+        // }
+
+        // // call() apply() and bind() methods -> 
+
+        // //call()-> we can explictely specify the context of this keyword.
+        // // function.call(object);
+
+        // printName.call(user1);
+        // printName.call(user2);
+
+
+        // challenge 2
+        //   function printName(city,pincode){
+        //     console.log("name of the user is",this.name,city,pincode)
+        // }
+
+        // let user1 ={
+        //     name:"Akash",
+        //     age:20
+        // }
+
+        // let user2={
+        //     name:"Vikas",
+        //     age:30
+        // }
+
+        // printName.call(user1,"Pune",140413);
+
+        // printName.call(user2,"Delhi",208123);
+
+
+        // apply() -> it take argument as an array
+
+        // function printName(city,pincode) {
+        //     console.log("name of the user is", this.name,city , pincode)
+        // }
+
+        // let user1 = {
+        //     name: "Akash",
+        //     age: 20
+        // }
+
+        // let user2 = {
+        //     name: "Vikas",
+        //     age: 30
+        // }
+
+        // printName.apply(user1, ["Pune", 140413]);
+
+        // printName.apply(user2, ["Delhi", 208123]);
+
+        // bind() -> bind creates a new function that can be invoked later.
+        //     function printName(city,pincode) {
+        //         console.log("name of the user is", this.name,city , pincode)
+        //     }
+
+        //     let user1 = {
+        //         name: "Akash",
+        //         age: 20
+        //     }
+
+        //     let user2 = {
+        //         name: "Vikas",
+        //         age: 30
+        //     }
+
+        //    let print = printName.bind(user1, "Pune", 140413);
+
+
+        //    print();
+
+
+        //Borrow a method 
+
+        // let user1 = {
+        //     name: "Tarun",
+        //     printName() {
+        //         console.log(this.name);
+        //     }
+        // }
+
+        // let user2 = {
+        //     name: "Abhishek",
+        // }
+
+        // user1.printName.call(user2);
+
+
+        // prototype -> 
+        // prototype is a javascript object that another object can use to get properties and method.
+
+
+        // every javascript object has an internal link to prototype object 
+        //   let car = {
+        //     name:"baleno"
+        //   }
+
+        //   console.log(car.toString());
+
+        // let car = {
+        //     name:"baleno"
+        //   }
+
+        // console.log(car);
+
+        // console.log(car.__proto__.__proto__);
+
+        
+        // every array can javascript has an internal like to prototype object 
+        //   let arr = [1,2,3,4];
+        //   console.log(arr);
+
+
+        //   console.log(arr.length)
+        //   console.log(arr.length());        
+
+        // let arr = [1,2,3,4];
+        // console.log(arr); 
+        // console.log(arr.__proto__);
+        // console.log(arr.__proto__.__proto__);
+        // console.log(arr.__proto__.__proto__.__proto__);
+     
+        // Prototype Chaining 
+        //   arr--> protopty -> Object -> null
+
+
+        // prototypal inheritence 
+        let vehicle = {
+            tyre:4,
+            color:"blue",
+            engine:"Petrol"
+        }
+
+       let car = {
+          color:"red"
+       }
+
+       let truck={
+        tyre:8
+       }
+     
+       car.__proto__=vehicle;
+
+       truck.__proto__ = vehicle;
+
+       console.log(truck.tyre); 
+       console.log(car.tyre);
+
+       console.log(car);
+        
+       console.log(car.hasOwnProperty("tyre"))
+       
+        
     </script>
 </body>
 

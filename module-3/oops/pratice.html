@@ -1,0 +1,124 @@
+<!-- // A class can contain 
+//    . Properties 
+//    . constrcutor 
+//    . instance methods 
+//    . getting/setters 
+//    . static methods 
+//    . private fields 
+//    . other functionality  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // class Student{
+    //     constructor(name,age) {
+    //         this.name = name;
+    //         this.age = age;
+    //     }
+
+    // }
+
+    // const student1 = new Student("Rahul",20);
+
+    // console.log(studenet1.name);
+    // console.log(student1.age);
+
+    // this inside a class 
+    // inside an instance method or constructor, this generally refers to the object 
+    // on which method is operating.
+
+    // class Student {
+    //     constructor(name){
+    //         this.name = name;
+    //     }
+    // }
+
+    // const student1 = new Student("Rahul");
+    // console.log(student1.name);
+
+    // Instance Methods 
+    // An instance method is a method that can be called 
+    // on object create from a class.
+
+    // class Student{
+    //     constructor(name){
+    //         this.name = name;
+    //     }
+
+    //     introduce() {
+    //         console.log(`Hi, I am ${this.name}`);
+    //     }
+    // }
+
+    // const student1 = new Student("Rahul");
+
+    // student1.introduce();
+
+    // class BankAccount {
+    //     constructor(owner, balance) {
+    //         this.owner = owner;
+    //         this.balance = balance;
+    //     }
+
+    //     deposit(amout) {
+    //         this.balance += amount;
+    //     }
+
+    //     withdraw(amount) {
+    //         this.balance -= amount;
+    //     }
+
+    //     showBalance() {
+    //         console.log(this.balance);
+    //     }
+    // }
+
+    // const account = new BankAccount("Rahul",1000);
+
+    // account.deposit(500);
+    // account.withdraw(200);
+
+    // Static Methods 
+    // Instance methods belong to objects create from the class 
+    // static methods belong to the class itself
+
+    // class MathHelper {
+    //     static add(a,b){
+    //       return a+b;
+    //     }
+    // }
+
+    // console.log(MathHelper.add(10,20));
+
+    class User {
+        constructor(name) {
+            this.name = name;
+        }
+
+        greet() {
+            return `Hello ${this.name}`;
+        }
+
+        static info() {
+            return "User class";
+        }
+    }
+
+    const user = new User("Rahul");
+
+    console.log(user.greet());
+
+</script>
+
+</html>
