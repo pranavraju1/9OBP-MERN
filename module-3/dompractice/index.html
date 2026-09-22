@@ -1,0 +1,52 @@
+<!-- Dynamic Shopping List using HTML and JavaScript where users 
+can add, edit, mark, and remove shopping items
+dynamically without refreshing the page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List </title>
+</head>
+
+<body>
+
+    <form id="product">
+        <input type="text" id="addProduct" name="product-name">
+        <button type="submit"></button>
+    </form>
+    <div class="items">
+
+    </div>
+    <script>
+        let itemName = "";
+
+        let form = document.querySelector("#product");
+
+        let input = document.querySelector("input");
+
+        let div = document.querySelector("div");
+      
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            console.log(input.value);
+            let h1 = document.createElement("h1");
+
+            let edit = document.createElement("Button")
+            
+            edit.addEventListener("click",function(){
+               alert("enter the new prodcut");
+            })
+
+            h1.innerHTML = input.value;
+            div.append(h1);
+        })
+
+
+    </script>
+</body>
+
+</html>
