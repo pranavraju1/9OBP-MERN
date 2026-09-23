@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+
+<body>
+
+    <ul class="notification">
+
+
+    </ul>
+
+
+    <script>
+        let notiElement = document.querySelector(".notification");
+
+        const notifications = [
+            {
+                id: 1,
+                message: "Rakesh enrolled in JavaScript course"
+            },
+            {
+                id: 2,
+                message: "Priya completed the HTML assignment"
+            },
+            {
+                id: 3,
+                message: "Amit submitted a new project"
+            },
+            {
+                id: 4,
+                message: "Sneha logged into the course"
+            },
+            {
+                id: 5,
+                message: "Rahul completed the CSS module"
+            }
+        ];
+
+        let index = 0;
+       let id = setInterval(()=>{
+            console.log("Hello");
+
+            let message=notifications[index].message;
+
+            let list = document.createElement("li");
+            list.innerText=message;
+
+            notiElement.append(list);
+
+            index++;
+
+            if(index == notifications.length)
+                clearInterval(id);
+        },1000)
+    </script>
+
+</body>
+
+</html>
