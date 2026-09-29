@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+
+<body>
+
+    <h1>Products</h1>
+
+    <div id="products"></div>
+
+    <script>
+        fetch('https://dummyjson.com/products', {
+            method: 'GET'
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                const productsContainer = document.querySelector("#products");
+
+                data.products.forEach(product => {
+
+                    productsContainer.innerHTML += `
+                        <div>
+                            <h2>${product.title}</h2>
+                            <p>Price: $${product.price}</p>
+                            <p>${product.description}</p>
+                        </div>
+                    `;
+
+                });
+
+            });
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!-- API application programming interface allow communication bw two applicaiton -->
+
+
+<!-- Protocal  -->
+
+
+<!--
+ API
+│
+├── HTTP/HTTPS       → REST APIs
+├── WebSocket        → Real-time communication
+├── gRPC              → RPC-based communication
+└── GraphQL           → Usually transported over HTTP
+ -->
+
+<!-- For a REST API, the typical structure is -->
+
+
+<!-- HTTPS  -->
+
+<!-- Get - Read Resources
+Post - Create resources
+Put - replace resources
+Patch - partially update reosurce
+Delete - delete resource
+
+
+| Version | Main idea |
+| ------------ | ------------------------------------------------------------------------------------------------------
+|
+| **HTTP/0.9** | Very basic, only `GET` |
+| **HTTP/1.0** | Headers, status codes, multiple methods |
+| **HTTP/1.1** | Persistent connections, `Host` header, chunked transfer |
+| **HTTP/2** | Multiplexing, binary framing, header compression |
+| **HTTP/3** | Uses **QUIC** instead of TCP; faster connection establishment and better behavior on changing networks |
+
+
+
+
+<!-- Fetch -->
+<!-- Fetch function is used to make http request. -->
+
+<!-- Code Breaking  -->
+
+HTTP Protocol
+│
+├── HTTP Methods
+│ ├── GET
+│ ├── POST
+│ ├── PUT
+│ ├── PATCH
+│ └── DELETE
+│
+├── Headers
+├── Status Codes
+├── Request
+└── Response
+
+
+Status code categories
+
+Status codes are 3-digit numbers divided into 5 categories:
+
+Range Category Meaning
+100–199 Informational Request is being processed
+200–299 Success Request was successful
+300–399 Redirection Further action/redirect is involved
+400–499 Client Error Something is wrong with the request
+500–599 Server Error Something went wrong on the server
+
+A simple way to remember:
+
+1xx → Information
+2xx → Success
+3xx → Redirect
+4xx → Client problem
+5xx → Server problem
+
+
+200 — OK
+201 — Created
+204 — No Content
+
+400 — Bad Request
+401 — Unauthorized
+403 — Forbidden
+404 — Not Found
+
+
+5xx — Server errors
+500 — Internal Server Error
+503 — Service Unavailable
+
+<!-- Why is fetch() Asynchronous?
+When JavaScript sends a request to a server, it doesn't know 
+how long the server will take to respond. -->
+
+Understanding the Response Object
+
+fetch(url)
+
+
+fetch
+
+
+response.status
+
+
+POST Request
+
+fetch("https://example.com/api/students", {
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify(student)
+}); -->
+
+<!-- 
+Error Handling:- -->
+<!-- Internet connection is unavailable
+Server is down
+API returns 404
+API returns 500
+Authentication fails
+CORS blocks the request
+Response contains invalid data -->
+
+
+<!-- if (!response.ok) {
+  throw new Error(`HTTP Error: ${response.status}`);
+} -->
+
+
+
+<!-- Network Errors
+A network error is different from an HTTP error.
+Examples include:
+No internet connection
+DNS failure
+Server cannot be reached
+Connection interruption
+Request being blocked by the browser -->
+
+
+<!-- POST /api/products
+
+Create a new product
+Body example: name, description, price, stock, category
+GET /api/products
+
+Get all products
+Optional query filters: ?category=&search=&sort=&order=&page=&limit=
+GET /api/products/:id
+
+Get one product by ID
+PUT /api/products/:id
+
+Update an existing product
+Body fields are optional: name, description, price, stock, category
+DELETE /api/products/:id
+
+Delete a product by ID
+Health check
+GET /api/health
+Returns server statu -->
