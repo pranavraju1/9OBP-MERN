@@ -195,6 +195,8 @@ function getProduct(){
 
 
 
+
+
 // Promise methods 
 promise.all 
 promise.race 
