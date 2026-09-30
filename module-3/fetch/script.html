@@ -15,7 +15,7 @@
 </style>
 
 <body>
-    <div></div>
+    <div class="loading"> Loading </div>
     <div class="product-wrapper">
 
     </div>
@@ -254,35 +254,55 @@
         //     })
 
 
-    //  delete 
-        fetch("http://localhost:3000/api/products/3",{
-         method:"DELETE",
-        }).then((res)=>res.json()).then((data)=>{
-           console.log(data);
-        }).catch((error)=>{
-            console.log(error);
-        })
 
-
-
+        // HTTP Error -> 404 , 401 
+        //  delete - status code 404
+        // fetch("http://localhost:3000/api/products/3", {
+        //     method: "DELETE",
+        // }).then((res) => {
+        //     if (!res.ok) {
+        //         throw new Error("Resource not found")
+        //     }
+        // }).catch((error) => {
+        //     console.log("error", error.message);
+        // })
 
 
         // Error 
-
-        // HTTP ERROR
         // Network Errors
-
         // A network error is different from an http error.
-
         // No internet conneciton
-        //  DNS failure
+        // DNS failure
         // Server cannot be reached
-        // COnnection interruption
-        // Request blocked by the browser
+        // Connection interruption
+        // Request blocked by the browser(cors) -> 
 
+
+        // origin protocol + host + port 
+
+        // fetch("http://localhost:3000/api/products/3", {
+        //     method: "DELETE",
+        // }).then((res) => {
+        //     // if (!res.ok) {
+        //     //     throw new Error("Resource not found")
+        //     // }
+        //     console.log(res);
+        // }).catch((error) => {
+        //     console.log("error", error.message);
+        // })
+
+        let loading = document.querySelector(".loading")
 
         // fetch product 
-
+        fetch("http://localhost:3000/api/products")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                loading.style.display="none"
+            })
+            .catch((error) => {
+                console.log(error);
+            })
 
     </script>
 </body>
