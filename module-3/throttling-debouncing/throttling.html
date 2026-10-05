@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scroll Event</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: black;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .content {
+                height: 3000px;
+                padding-top: 100px;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="header">
+            Scroll the page
+        </div>
+
+        <div class="content">
+            <h1>Scroll Down</h1>
+            <p>Open the browser console and scroll.</p>
+        </div>
+
+        <script>
+
+            //  Throatling -> thortling is technicque to exctue a funciton once in 
+            // a time interval.
+
+            //  when  scroll down print scrolling 
+            // scrolling 
+            //  2nd time -> after 2s
+
+            //  scrolling 
+
+            //  after 2s 
+
+            //  scrolling
+
+            // let time = 0;
+
+            // function handleScroll() {
+            //     let currTime = new Date().getTime();
+            //     if (currTime - time >= 10000) {
+            //         console.log("scrolling")
+            //         time = currTime;
+            //     }
+            // }
+
+            // window.addEventListener("scroll", handleScroll);
+
+
+
+
+            // resize 
+
+            // 2 seconds
+
+            // resize
+
+            // 2 second 
+
+            // resize 
+
+            // let time = 0;
+
+            // function handleResize() {
+            //     let currTime = new Date().getTime();
+            //     if (currTime - time >= 2000) {
+            //         console.log("resizing");
+            //         time = currTime;
+            //     }
+            // }
+
+            // window.addEventListener("resize", handleResize)
+
+            // Resuablility
+
+            function scrollHandler() {
+                console.log("Scrolling")
+            }
+
+            function throttle(callback, delay) {
+                let time = 0;
+                return function () {
+                    let currTime = new Date().getTime();
+                    if (currTime - time >= delay) {
+                        callback();
+                        time = currTime;
+                    }
+                }
+            }
+
+            throttleHandler = throttle(scrollHandler, 2000);
+
+            window.addEventListener("scroll", throttleHandler);
+
+
+
+            function handleResize(){
+                console.log("resizing");
+            }
+
+            throttleHandler2 = throttle(handleResize,2000)
+
+
+            window.addEventListener("resize",throttleHandler2);
+
+
+            // debouncing 
+            
+
+        </script>
+
+    </body>
+
+    </html>
+</body>
+
+</html>

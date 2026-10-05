@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing</title>
+</head>
+
+<body>
+    <input type="text" id="search">
+    <script>
+        let search = document.querySelector("#search");
+
+
+        // After key stroke few user does'nt enter anthing for 200ms then only call the api
+
+        let timerId;
+        function searchHandler(event) {
+            clearTimeout(timerId);
+            timerId=setTimeout(()=>{
+                console.log("Api call for search suggestion",event.target.value)
+            },2000) 
+        }
+
+        search.addEventListener("input",searchHandler)
+
+
+        // Make it resuable 
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  let date1=new Date();
+        //  console.log(date1);
+
+        //  Date Constructor 
+        // let date2=new Date("2026-05-18T03:02:00");
+        // // YYYY-MM-DDTHH:mm:ss.sssZ
+
+        // console.log(date2.getFullYear());
+
+        // console.log(date2.getMonth());
+
+        // console.log(date2.getMinutes())
+
+
+        // let date = new Date();
+
+
+        // //number of milliseconds since January 1, 1970 00:00:00 UTC
+        // console.log(date.getTime());
+
+        // find no of hour passed from the start of batch till now.
+        let date1 = new Date("2026-05-18T03:00:00")
+        let date2 = new Date();
+
+        let milliSec =date2.getTime()-date1.getTime();
+
+        let totalHours = milliSec/(1000*60*60);
+        console.log(totalHours);
+        
+
+        // 12141627599
+
+        
+
+    </script>
+</body>
+
+</html>
