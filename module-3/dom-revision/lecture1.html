@@ -1,0 +1,102 @@
+<!-- event -> any action that happen on the browser is event  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+
+    <p>⚀</p>
+    
+     <button>spin</button>
+    <!-- <button>Click me</button>
+
+    <p></p>
+    <input type="text" id="input">
+
+    <select>
+       <option value="">Name</option>
+       <option>Age</option>
+
+    </select> -->
+
+    <script>
+        // approach1
+        // function handleClick(){
+        //     console.log("button is clicked");
+        // }
+
+
+        // approach2
+        // let button = document.querySelector("button");
+
+        // button.onclick=function(){
+        //     console.log("button is clicked")
+        // }
+
+        // button.onclick=function(){
+        //     console.log("button is clicked2")
+        // }
+
+        // approach 3
+        // add event listener 
+        // function handleClick(){
+        //     console.log("button clicked");
+        // }
+
+        // button.addEventListener("click",()=>{
+        //     console.log("button clicked");
+        // })
+
+        // button.addEventListener("click",handleClick)
+
+        // button.removeEventListener("click",handleClick)
+        // let inp = document.querySelector("#input");
+        // let p = document.querySelector("p");
+
+        // inp.addEventListener("input", (event) => {
+        //     p.textContent = event.target.value;
+        // })
+
+        //  change event -> select (when option is changed).
+
+        // state variable -> represent current state of the application.
+        //  
+
+        let button=document.querySelector("button");
+        let p=document.querySelector("p");
+        const faces = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+
+        // create a button spin when spin is clicked show the dice randomly.
+
+       function updateDom(){
+         p.textContent=faces[n];
+        }
+       
+        let n=0;
+        button.addEventListener("click",()=>{
+           n=Math.floor(Math.random()*6)
+           updateDom();
+        })
+
+        p.textContent=face[n];
+
+
+        
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- on click the button print a message on the console that button is pressed. -->

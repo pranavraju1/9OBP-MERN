@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Page</title>
+</head>
+
+<style>
+    .start {
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <div>
+        <h1 id="heading">Hello</h1>
+
+
+        <span class="span start">Start</span>
+        <span class="span">check</span>
+        <span class="span">check2</span>
+        <p style="display:none">display none content</p>
+        <img src="https://img" alt="img">
+
+    </div>
+
+    <script>
+        // console.log(document);
+        // console.log(document.body);
+
+        // console.log(document.getElementById("heading"));
+        // console.log(document.getElementsByClassName("para"))
+
+        // // querySelector
+        // //return the first element that match the css selector. 
+        // console.log(document.querySelector("div p"));
+
+        // console.log(document.querySelector(".para"));
+
+
+        //querySelectorAll -> return all the element that matches the css selector.
+
+        // console.log(document.querySelectorAll(".para"));
+
+        // textContent 
+        // let span = document.querySelector(".span");
+        // console.log(span.textContent);
+        // span.textContent="end";
+
+        // print the content of all the span tag 
+        // let span = document.querySelectorAll("span");
+        // //    nodeList 
+        // console.log(span);
+        // span.forEach((node) => {
+        //     console.log(node.textContent);
+        // })
+
+        // // 
+        // console.log(span.length)
+
+
+
+        // show "welcome to the course" inside paragraph in bold
+        let p = document.querySelector("p");
+        // p.textContent="welcome to the course";
+        // p.style.fontWeight="bold";
+
+        // innerHTML
+        // p.innerHTML="<b>welcome to the course<b>";
+
+        console.log("text content", p.textContent);
+        console.log("inner HTML", p.innerHTML);
+        console.log("inner text", p.innerText); // get only visible text
+
+
+        let div = document.querySelector("div");
+        console.log(div);
+
+        // getAttribute
+
+        let img = document.querySelector("img");
+        console.log("img src attribute", img.getAttribute("src"));
+
+        //alt attribute 
+        console.log(img.getAttribute("alt"));
+
+
+
+        //setAttribute
+        img.setAttribute("id", "img-id")
+
+        //   update attribute 
+
+        //  removeAttribute -> remove alt attribute from img 
+        img.removeAttribute("alt")
+
+        // hasAttribute 
+
+        console.log(img.hasAttribute("class"));
+
+        // using dot can read the value of an attribute 
+        console.log(img.src)
+
+        console.log(img.id)
+
+        img.id = "changed id";
+
+        // className 
+        let span = document.querySelector("span");
+        console.log(span.className);
+
+        span.className = "span starting";
+
+        //classList 
+        console.log(span.classList)
+       
+        //add one more class(gagan) to span 
+        span.classList.add("gagan");
+
+        // remove 
+        span.classList.remove("span");
+
+        // toggle -> if exist remove and if not add it 
+        span.classList.toggle("gagan");
+
+        // contains 
+        console.log(span.classList.contains("starting"));
+
+        // replace
+        span.classList.replace("starting","start");
+       
+     
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
